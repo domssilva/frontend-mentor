@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Karla&display=swap");
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+p {
+  color: #98a6bd;
+}
+
+button {
+  border: none;
+  padding: 1em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #2ab2af;
+}
+
+a:hover {
+  color: #91ac1b;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  text-align: center;
+}
+
+body {
+  background-color: #c1d7e6;
+}
+
+.container {
+  width: 38rem;
+  margin: 10vh auto;
+  background: #e5eff5;
+  border-radius: 8px;
+}
+
+.container .header {
+  background-color: white;
+  padding: 2em;
+  line-height: 1.5;
+  border-radius: 8px 8px 0 0;
+}
+
+.container .header h1 {
+  color: #2ab2af;
+}
+
+.container .header h2 {
+  color: #c0df34;
+}
+
+.container .body {
+  background-color: #2ab2af;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  color: #e5eff5;
+  border-radius: 0 0 8px 8px;
+}
+
+.container .body p {
+  color: #e5eff5;
+}
+
+.container .body div {
+  padding: 2em;
+}
+
+.container .body .monthly {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: #26a19f;
+  border-radius: 0 0 0 8px;
+}
+
+.container .body .monthly button {
+  width: 90%;
+  color: #e5eff5;
+  display: block;
+  font-weight: 900;
+  margin: 2em auto 0 auto;
+  border-radius: 5px;
+  background-color: #c0df34;
+}
+
+.container .body .monthly .price {
+  font-weight: 900;
+  font-size: 200%;
+  margin: .6em;
+}
+
+.container .body .monthly .price span {
+  font-size: 40%;
+  opacity: .6;
+}
+
+.container .body .why {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.container .body .why p {
+  font-size: 80%;
+  opacity: .9;
+  line-height: .6;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .container .body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=main.css.map */

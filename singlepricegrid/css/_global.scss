@@ -1,0 +1,44 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+p {
+    color: $blue;
+}
+
+button {
+    border: none;
+    padding: 1em;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $cyan;
+}
+
+a:hover {
+    color: darken($green, 15%);
+}
+
+.grid {
+    display: grid;
+    
+}
+
+.flex {
+    display: flex;
+}
+
+footer {
+    text-align: center;
+}

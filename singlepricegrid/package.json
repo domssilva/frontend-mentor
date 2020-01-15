@@ -1,0 +1,15 @@
+{
+  "name": "single-price-grid-component-master",
+  "version": "1.0.0",
+  "description": "Price Grid Component coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Domenique Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

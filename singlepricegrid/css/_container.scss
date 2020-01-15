@@ -1,0 +1,92 @@
+body {
+    background-color: darken($gray, 10%);
+}
+
+.container {
+    width: 38rem;
+    margin: 10vh auto;
+    background: $gray;
+    border-radius: $border-radius;
+
+    .header {
+
+        background-color: white;
+        padding: 2em;
+        line-height: 1.5;
+        border-radius: $border-radius $border-radius 0 0;
+
+        h1 {
+            color: $cyan;
+        }
+    
+        h2 {
+            color: $green;
+        }
+    
+    }
+
+    .body {
+        background-color: $cyan;
+        flex: 0 1 auto;
+        color: $gray;
+        border-radius: 0 0 $border-radius $border-radius;
+
+        p {
+            color: $gray;
+        }
+
+        div {
+            padding: 2em;
+        }
+
+        .monthly {
+            flex-basis: 100%;
+            background-color: darken($cyan, 4%);
+            border-radius: 0 0 0 $border-radius;
+
+            button {
+                width: 90%;
+                color: $gray;
+                display: block;
+                font-weight: 900;
+                margin: 2em auto 0 auto;
+                border-radius: 5px;
+                background-color: $green;
+            }
+
+            .price {
+                font-weight: 900;
+                font-size: 200%;
+                margin: .6em;
+
+                span {
+                    font-size: 40%;
+                    opacity: .6;
+                }
+            }
+        }
+
+        .why {
+            flex-basis: 100%;
+
+            p {
+                font-size: 80%;
+                opacity: .9;
+                line-height: .6;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+
+        width: 90%;
+        
+        //.header {}
+
+        .body {
+            flex-wrap: wrap;
+        }
+    }
+}

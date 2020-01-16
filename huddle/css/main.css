@@ -15,7 +15,7 @@ body {
   color: whitesmoke;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  background-image: url("/huddle/images/bg-mobile.svg");
+  background-image: url("./images/bg-mobile.svg");
   background-position: top;
   background-size: 115%;
   background-repeat: no-repeat;
@@ -136,9 +136,10 @@ button {
 @media (min-width: 768px) {
   html {
     height: 100%;
+    overflow: hidden;
   }
   body {
-    background-image: url("/huddle/images/bg-desktop.svg");
+    background-image: url("./images/bg-desktop.svg");
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -152,19 +153,22 @@ button {
         grid-template-areas: "head head head . ." "bodyImg bodyImg bodyImg bodyTxt bodyTxt" "bodyImg bodyImg bodyImg bodyTxt bodyTxt" ". . . footer footer";
   }
   .container .body-img {
-    margin-top: 1em;
+    position: relative;
+    top: 20px;
   }
   .container .body-txt {
-    margin-top: 1em;
+    position: relative;
+    top: 20px;
   }
   .container .body-txt h2, .container .body-txt p {
     text-align: left !important;
   }
   .container .body-txt h2 {
     margin: 0;
+    font-size: 200%;
   }
   .container .body-txt p {
-    width: 100%;
+    width: 80%;
     padding: 0;
     margin: 2em 0;
   }
@@ -173,6 +177,9 @@ button {
   }
   .logo {
     width: 30%;
+    padding: 0;
+    position: relative;
+    top: 20px;
   }
   .responsive-img {
     -webkit-transform: none;

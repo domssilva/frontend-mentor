@@ -8,7 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     
-    background-image: url('/huddle/images/bg-mobile.svg');
+    background-image: url('./images/bg-mobile.svg');
     background-position: top;
     background-size: 115%;
     background-repeat: no-repeat;
@@ -42,6 +42,7 @@ button {
 .container {
 
     width: 100%;
+    
     display: grid;
     grid-gap: 3em;
     grid-template-areas: 

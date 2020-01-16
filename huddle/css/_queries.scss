@@ -3,10 +3,11 @@
 @media (min-width: 768px) {
     html {
         height: 100%;
+        overflow: hidden;
     }
 
     body {
-        background-image: url('/huddle/images/bg-desktop.svg');
+        background-image: url('./images/bg-desktop.svg');
         background-position: top;
         background-size: contain;
         background-repeat: no-repeat;
@@ -24,12 +25,14 @@
                     ". . . footer footer";   
 
         .body-img {
-            margin-top: 1em;
+            position: relative;
+            top: 20px;
         }
 
         .body-txt {
 
-            margin-top: 1em;
+            position: relative;
+            top: 20px;
 
             h2, p {
                 text-align: left !important;
@@ -37,10 +40,11 @@
 
             h2 {
                 margin: 0;
+                font-size: 200%;
             }
 
             p {
-                width: 100%;
+                width: 80%;
                 padding: 0;
                 margin: 2em 0;
             }
@@ -54,6 +58,9 @@
 
     .logo {
         width: 30%;
+        padding: 0;
+        position: relative;
+        top: 20px;
     }
 
     .responsive-img {

@@ -1,0 +1,121 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background: $violet;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    
+    background-image: url('/huddle/images/bg-mobile.svg');
+    background-position: top;
+    background-size: 115%;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    width: 190px;
+    display: block;
+    margin: 1em auto .5em auto;
+    padding: .5em;
+    
+    color: $violet;
+    background: whitesmoke;
+    border-radius: 20px;
+    text-transform: capitalize;
+
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    
+}
+
+.container {
+
+    width: 100%;
+    display: grid;
+    grid-gap: 3em;
+    grid-template-areas: 
+                "head"
+                "bodyImg"
+                "bodyTxt"
+                "footer";
+    
+    header {
+        grid-area: head;
+    }
+
+    .body-img {
+        grid-area: bodyImg;
+    }
+
+    .body-txt {
+        grid-area: bodyTxt;
+
+        h2 {
+            text-align: center;
+            line-height: 1.6;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 110%;
+        }
+
+        p {
+            margin: 0 auto;
+            padding: 1em;
+            font-size: 80%;
+            text-align: center;
+            line-height: 1.5;
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 2em 0;
+
+        span {
+            vertical-align: middle;
+            border: 1px solid white;
+            text-align: center;
+            border-radius: 100%;
+            padding: .2em;
+            margin-right: .6em;
+
+            &:last-child() {
+                margin: 0;
+            }
+        }
+
+        i {
+            width: 20px;
+            height: 15px;
+            font-size: 80%;
+        }
+    }
+}
+
+.logo {
+    position: relative;
+    width: 40%;
+    left: 0;
+    padding: 2em .8em;
+}
+
+.responsive-img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(-25px);
+}

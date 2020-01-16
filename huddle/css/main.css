@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+/*
+
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+*/
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #674baf;
+  color: whitesmoke;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url("/huddle/images/bg-mobile.svg");
+  background-position: top;
+  background-size: 115%;
+  background-repeat: no-repeat;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  width: 190px;
+  display: block;
+  margin: 1em auto .5em auto;
+  padding: .5em;
+  color: #674baf;
+  background: whitesmoke;
+  border-radius: 20px;
+  text-transform: capitalize;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3em;
+      grid-template-areas: "head" "bodyImg" "bodyTxt" "footer";
+}
+
+.container header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head;
+}
+
+.container .body-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bodyImg;
+}
+
+.container .body-txt {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: bodyTxt;
+}
+
+.container .body-txt h2 {
+  text-align: center;
+  line-height: 1.6;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 110%;
+}
+
+.container .body-txt p {
+  margin: 0 auto;
+  padding: 1em;
+  font-size: 80%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.container footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 2em 0;
+}
+
+.container footer span {
+  vertical-align: middle;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 100%;
+  padding: .2em;
+  margin-right: .6em;
+}
+
+.container footer span:last-child() {
+  margin: 0;
+}
+
+.container footer i {
+  width: 20px;
+  height: 15px;
+  font-size: 80%;
+}
+
+.logo {
+  position: relative;
+  width: 40%;
+  left: 0;
+  padding: 2em .8em;
+}
+
+.responsive-img {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+@media (min-width: 768px) {
+  html {
+    height: 100%;
+  }
+  body {
+    background-image: url("/huddle/images/bg-desktop.svg");
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 3em;
+        grid-template-areas: "head head head . ." "bodyImg bodyImg bodyImg bodyTxt bodyTxt" "bodyImg bodyImg bodyImg bodyTxt bodyTxt" ". . . footer footer";
+  }
+  .container .body-img {
+    margin-top: 1em;
+  }
+  .container .body-txt {
+    margin-top: 1em;
+  }
+  .container .body-txt h2, .container .body-txt p {
+    text-align: left !important;
+  }
+  .container .body-txt h2 {
+    margin: 0;
+  }
+  .container .body-txt p {
+    width: 100%;
+    padding: 0;
+    margin: 2em 0;
+  }
+  .container button {
+    margin: 0;
+  }
+  .logo {
+    width: 30%;
+  }
+  .responsive-img {
+    -webkit-transform: none;
+            transform: none;
+    width: 100%;
+  }
+  footer {
+    -webkit-box-pack: end !important;
+        -ms-flex-pack: end !important;
+            justify-content: flex-end !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

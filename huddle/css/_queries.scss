@@ -1,0 +1,68 @@
+// desktop layout
+
+@media (min-width: 768px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-image: url('/huddle/images/bg-desktop.svg');
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-gap: 3em;
+        grid-template-areas: 
+                    "head head head . ."
+                    "bodyImg bodyImg bodyImg bodyTxt bodyTxt"
+                    "bodyImg bodyImg bodyImg bodyTxt bodyTxt"
+                    ". . . footer footer";   
+
+        .body-img {
+            margin-top: 1em;
+        }
+
+        .body-txt {
+
+            margin-top: 1em;
+
+            h2, p {
+                text-align: left !important;
+            }
+
+            h2 {
+                margin: 0;
+            }
+
+            p {
+                width: 100%;
+                padding: 0;
+                margin: 2em 0;
+            }
+            
+        }
+
+        button {
+            margin: 0;
+        }
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .responsive-img {
+        transform: none;
+        width: 100%;
+    }
+
+    footer {
+        justify-content: flex-end !important;
+    }
+
+}

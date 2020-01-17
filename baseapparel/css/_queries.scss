@@ -1,0 +1,90 @@
+// desktop view
+
+@media (min-width:  576px) {
+    .hero {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 768px) {
+
+    * {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    $left-distance: 8em;
+
+    body {
+        padding-left: $left-distance !important;
+        grid-template-areas: 'head head . hero hero'
+                             'main main . hero hero'
+                             'email email . hero hero';
+    }
+
+    header {
+        
+        padding-top: 3.5em !important;
+
+        .logo {
+            width: 30%;
+        }
+    }
+
+    .hero {
+        background-image: url('../images/hero-desktop.jpg');
+        background-position: left;
+        height: 100vh;
+        width: 35vw;
+    }
+
+    main {
+
+        height: 30vh;
+        
+        h1 {
+            text-align: left;
+            letter-spacing: .4em;
+            font-size: 300%;
+            width: 50%;
+        }
+
+        p {
+            width: 70%;
+            margin-top: 1em !important;
+            text-align: justify;
+            line-height: 1.8em;
+        }
+    }
+
+    .email {
+        height: 25vh;
+        padding-top: 2em !important;
+    
+        form {
+            text-align: start;
+            justify-content: flex-start;
+        }
+    
+        #email {
+            width: 70%;
+            padding-left: 30px !important;
+        }
+
+        #exclamationMark {
+            right: 40%;
+        }
+
+        #error {
+            display: none;
+            margin: .5em 0 0 4em !important;
+        }
+    
+        input[type="submit"] {
+            position: relative;
+            right: 2em;
+        }
+    }
+    
+}
+

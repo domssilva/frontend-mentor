@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/main.css">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
@@ -22,11 +22,54 @@
   </main>
 
  <section class="email">
-    <form action="">
-      <input type="email" name="email" id="email" placeholder="Email Address" required>
-      <input type="submit" value="&#62;">
+    <form>
+      <input type="text" name="email" id="email" placeholder="Email Address">
+      <span id="exclamationMark">!</span>
+      <input id="submit" type="submit" value="&#62;">
     </form>
+    <small id="error">please provide a valid email</small>
  </section>
 
+ <script>
+
+  var emailRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var submitBtn = document.getElementById('submit');
+  var inputEmail = document.getElementById('email');
+  var emailForm = document.querySelector('form');
+  var errorMsg = document.getElementById('error');
+  var exclamationMarkIcon = document.getElementById('exclamationMark');
+  
+
+  emailForm.onsubmit = function() {
+    
+    var userEmail = inputEmail.value;
+    
+    if (validateEmail(userEmail)) {
+      return true;
+    } else {
+      // show error msg
+      errorMsg.style.display = 'block';
+
+      // set border red
+      inputEmail.style.border = '2px solid #f96262';
+
+      // show error icon
+      exclamationMarkIcon.style.display = 'inline';
+
+      return false;
+    }
+    
+  };
+
+  function validateEmail(userInput) {
+
+    if (userInput.match(emailRegx)) {
+      return true;
+    } else {
+      return false;
+    }    
+  }
+
+ </script>
 </body>
 </html>

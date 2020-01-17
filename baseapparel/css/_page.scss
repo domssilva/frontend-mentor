@@ -24,8 +24,8 @@ body {
 
 header {
 
-    grid-area: head;
     padding: 1.5em;
+    grid-area: head;
 
     .logo {
         width: 30%;
@@ -71,13 +71,19 @@ main {
     grid-area: email;
     padding-bottom: 4.5em;
 
+    form {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
     input {
         background: none;
         outline: none;
         display: inline-block;
     }
 
-    input[type='email'] {
+    #email {
         border: 1px solid $pink;
         height: 2.5em;
         border-radius: 50px;
@@ -105,51 +111,26 @@ main {
         box-shadow: -2px 2px 3px rgba($pink, .6);
     }
 
-    form {
-        margin: 0 auto 0 auto;
-        text-align: center;
-        position: relative;
+    input[type='submit']:hover {
+        transform: scale(1.2);
     }
+
 }
 
-
-// desktop view
-
-@media (min-width: 768px) {
-    
-    /*      MOBILE GRID AREA
-                         'head'
-                         'hero'
-                         'main'
-                         'email'
+#exclamationMark {
+    position: absolute;
+    display: none;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: whitesmoke;
+    background: #f96262;
+    right: 80px;
+    top: 10px;
 }
-    */
 
-    body {
-        grid-template-areas: 'head . . hero hero'
-                             'main main . hero hero'
-                             'email email . hero hero';
-    }
-
-    header {
-        .logo {
-            width: 80%;
-            margin: 2em 0 0 5em;
-        }
-    }
-
-    .hero {
-        background-image: url('../images/hero-desktop.jpg');
-        height: 100vh;
-        width: 40vw;
-    }
-
-    main {
-        h1 {
-            font-size: 250%;
-        }
-    }
-
-    .email {}
-    
+#error {
+    display: none;
+    margin: .5em 0 0 4em;
 }

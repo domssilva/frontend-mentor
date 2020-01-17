@@ -22,10 +22,10 @@ body {
 }
 
 header {
+  padding: 1.5em;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: head;
-  padding: 1.5em;
 }
 
 header .logo {
@@ -76,13 +76,23 @@ main p {
   padding-bottom: 4.5em;
 }
 
+.email form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
 .email input {
   background: none;
   outline: none;
   display: inline-block;
 }
 
-.email input[type='email'] {
+.email #email {
   border: 1px solid #ce9797;
   height: 2.5em;
   border-radius: 50px;
@@ -126,34 +136,95 @@ main p {
           box-shadow: -2px 2px 3px rgba(206, 151, 151, 0.6);
 }
 
-.email form {
-  margin: 0 auto 0 auto;
+.email input[type='submit']:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#exclamationMark {
+  position: absolute;
+  display: none;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
   text-align: center;
-  position: relative;
+  color: whitesmoke;
+  background: #f96262;
+  right: 80px;
+  top: 10px;
+}
+
+#error {
+  display: none;
+  margin: .5em 0 0 4em;
+}
+
+@media (min-width: 576px) {
+  .hero {
+    height: 60vh;
+  }
 }
 
 @media (min-width: 768px) {
-  /*      MOBILE GRID AREA
-                         'head'
-                         'hero'
-                         'main'
-                         'email'
-}
-    */
+  * {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   body {
-        grid-template-areas: 'head . . hero hero' 'main main . hero hero' 'email email . hero hero';
+    padding-left: 8em !important;
+        grid-template-areas: 'head head . hero hero' 'main main . hero hero' 'email email . hero hero';
+  }
+  header {
+    padding-top: 3.5em !important;
   }
   header .logo {
-    width: 80%;
-    margin: 2em 0 0 5em;
+    width: 30%;
   }
   .hero {
     background-image: url("../images/hero-desktop.jpg");
+    background-position: left;
     height: 100vh;
-    width: 40vw;
+    width: 35vw;
+  }
+  main {
+    height: 30vh;
   }
   main h1 {
-    font-size: 250%;
+    text-align: left;
+    letter-spacing: .4em;
+    font-size: 300%;
+    width: 50%;
+  }
+  main p {
+    width: 70%;
+    margin-top: 1em !important;
+    text-align: justify;
+    line-height: 1.8em;
+  }
+  .email {
+    height: 25vh;
+    padding-top: 2em !important;
+  }
+  .email form {
+    text-align: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .email #email {
+    width: 70%;
+    padding-left: 30px !important;
+  }
+  .email #exclamationMark {
+    right: 40%;
+  }
+  .email #error {
+    display: none;
+    margin: .5em 0 0 4em !important;
+  }
+  .email input[type="submit"] {
+    position: relative;
+    right: 2em;
   }
 }
 /*# sourceMappingURL=main.css.map */

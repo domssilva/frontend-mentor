@@ -171,6 +171,10 @@ main p {
     padding: 0 !important;
   }
   body {
+    height: 100vh;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-size: cover;
+    background-position: left;
     padding-left: 8em !important;
         grid-template-areas: 'head head . hero hero' 'main main . hero hero' 'email email . hero hero';
   }

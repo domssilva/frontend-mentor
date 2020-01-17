@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+body {
+    background: whitesmoke;
+    font-family: $font-family;
+    font-weight: 400;
+    color: $pink;
+    -webkit-font-smoothing: antialiased;
+
+    display: grid;
+    grid-template-areas: 'head'
+                         'hero'
+                         'main'
+                         'email';
+}
+
+header {
+
+    grid-area: head;
+    padding: 1.5em;
+
+    .logo {
+        width: 30%;
+    }
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 35vh;
+    background-image: url('../images/hero-mobile.jpg');  
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+main {
+
+    grid-area: main;
+
+    h1 {
+        color: $gray;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 1.5em 1.5em .5em 1.5em;
+        letter-spacing: .2em;
+
+        span {
+            font-weight: 300;
+            color: $pink;
+            letter-spacing: .3em;
+        }
+    }
+
+    p {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto 2em auto;
+    }
+}
+
+.email {
+
+    grid-area: email;
+    padding-bottom: 4.5em;
+
+    input {
+        background: none;
+        outline: none;
+        display: inline-block;
+    }
+
+    input[type='email'] {
+        border: 1px solid $pink;
+        height: 2.5em;
+        border-radius: 50px;
+        width: 80%;
+        height: 40px;
+        padding-left: 30px;
+    }
+
+    input::placeholder {
+        color: $pink;
+        font-weight: 700;
+    }
+
+    input[type='submit'] {
+        cursor: pointer;
+        border-radius: 50px;
+        width: 50px;
+        font-size: 150%;        
+        background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+        color: whitesmoke;
+        border: none;
+        position: absolute;
+        right: 20px;
+        height: 40px;
+        box-shadow: -2px 2px 3px rgba($pink, .6);
+    }
+
+    form {
+        margin: 0 auto 0 auto;
+        text-align: center;
+        position: relative;
+    }
+}
+
+
+// desktop view
+
+@media (min-width: 768px) {
+    
+    /*      MOBILE GRID AREA
+                         'head'
+                         'hero'
+                         'main'
+                         'email'
+}
+    */
+
+    body {
+        grid-template-areas: 'head . . hero hero'
+                             'main main . hero hero'
+                             'email email . hero hero';
+    }
+
+    header {
+        .logo {
+            width: 80%;
+            margin: 2em 0 0 5em;
+        }
+    }
+
+    .hero {
+        background-image: url('../images/hero-desktop.jpg');
+        height: 100vh;
+        width: 40vw;
+    }
+
+    main {
+        h1 {
+            font-size: 250%;
+        }
+    }
+
+    .email {}
+    
+}

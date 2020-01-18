@@ -1,0 +1,78 @@
+@media (min-width: 768px) {
+
+    body {
+        padding: 3em;
+        background-image: url(../images/bg-intro-desktop.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-rendering: optimizeLegibility;
+        overflow: hidden;
+    }
+
+    .container {
+        display: grid;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        vertical-align: middle;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    header {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 4em;
+        position: relative;
+        transform: translateY(-40px);
+
+        h1 {
+            margin-bottom: .3em;
+            font-size: 300%;
+            text-align: left;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
+    main {
+        align-self: center;
+        width: 85%;
+
+        .try {
+            p {
+                margin: 0;
+                width: 100%;
+                font-size: 80%;
+            }
+        }
+
+        form {
+            height: 55vh;
+            justify-content: space-around;
+
+            input {
+                margin-bottom: 0;
+            }
+
+            input[type="submit"] {
+                font-size: 90%;
+            }
+
+            input::placeholder {
+                font-size: 125%;
+            }
+
+            small {
+                font-size: 60%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+}

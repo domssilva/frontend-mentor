@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    // Weights: 400, 700
+    font-weight: 400;
+    overflow-x: hidden;
+    font-family: 'Karla', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+}
+
+button {
+    color: $gray;
+    border: none;           
+    outline: none;
+    padding: .5em;
+    background: none;
+    border: 1px solid $gray;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+hr {
+    opacity: .25;
+    margin: 0 auto;
+    color: $violet2;
+}
+
+a {
+    text-decoration: none;
+    color: $gray;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+.insure {
+    color: $violet2;
+    font-size: 110%;
+    font-weight: 700;
+    align-self: center;
+    text-transform: uppercase;
+}

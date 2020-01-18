@@ -1,0 +1,238 @@
+header {
+
+    position: relative;
+
+    .nav {
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+    
+        i.fas {
+            padding: .4em;
+            font-size: 90%;
+            align-self: center;
+            border: 2px solid rgba(51, 51, 51, 0.7);
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+    }
+    
+    .hero-img {
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../images/image-intro-mobile.jpg');
+    }
+
+    .hero-intro {
+        padding: 2em;
+        color: $gray;
+        min-height: 60vh;
+        text-align: center;
+        background-color: $violet1;
+        
+        background-image: 
+        url('../images/bg-pattern-intro-left-mobile.svg');
+        // url('../images/bg-pattern-intro-right-mobile.svg');
+        background-position: left -30% top; //right 200px;
+        background-repeat: no-repeat;
+
+        h1 {
+            font-weight: 400;
+            font-size: 190%;
+            line-height: 1;
+            margin-bottom: .8em;
+        }
+
+        button {
+            width: 8em;
+            margin: 2em 0;
+            text-transform: uppercase;
+        }       
+
+    }
+
+}
+
+main {
+    color: $violet1;
+    padding-top: 6em;
+    text-align: center;
+    position: relative;
+    background-color: $gray;
+    
+    .svg-hero-overlay {
+        top: -20%;
+        left: 1%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-image: url('../images/bg-pattern-intro-right-mobile.svg');
+    }
+    
+    hr {
+        width: 35%;
+        margin-bottom: 1.2em;
+    }
+
+    h2 {
+        font-size: 170%;
+        letter-spacing: .1em;
+        margin-bottom: 1.2em;
+    }
+
+    .traits {
+
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+
+        div {
+
+            margin-bottom: 3em;
+
+            &:last-child {
+                margin-bottom: 5em;
+            }
+
+            h4 {
+                font-size: 120%;
+                font-weight: 400;
+                margin-bottom: .6em;
+            }
+
+            p {
+                color: $violet3;
+                font-size: 85%;
+                word-wrap: break-word;
+            }
+    
+            .icon-app {
+                height: 65px;
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    .more {
+
+        width: 92%;
+        margin: 0 auto;
+
+        padding: 2em;
+        color: $gray;
+        margin-bottom: 5em;
+        background-color: $violet1;
+
+        background-size: 120px;
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-image: url('../images/bg-pattern-how-we-work-mobile.svg');
+
+        h3 {
+            font-size: 180%;
+            font-weight: 400;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+footer {
+    padding: 2em;
+    text-align: center;
+    background-color: darken($gray, 2%);
+
+    background-image: url('../images/bg-pattern-footer-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center -6.5%;
+    background-size: contain;
+
+    .insure {
+        margin-bottom: 1em;
+    }
+
+    hr {
+        opacity: .1;
+        margin: 1.5em;
+    }
+
+    .icons-container {
+        width: 30vw;
+        opacity: .7;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+
+        i {
+            transition: all .1s linear;
+        }
+
+        i:hover {
+            opacity: 1;
+            color: $violet1;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+    }
+
+    .footer-list {
+        color: $violet3;
+        text-transform: uppercase;
+
+        h6 {
+            
+            margin-bottom: 2em;
+            letter-spacing: .08em;
+        }
+
+        ul {
+            font-size: 60%;
+            font-weight: 600;
+            margin-bottom: 2em;
+            color: darken($violet3, 40%);
+
+            li {
+                margin-bottom: .5em;
+            }
+        }
+    }
+}
+
+#toggleNavMobile {
+    display: none;
+
+    color: $gray;
+    height: 90vh;
+    width: 100vw;
+    padding: 2em;
+    top: 61px;
+    text-align: center;
+    position: absolute;
+    text-transform: uppercase;
+    background-color: $violet1;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-image: url('../images/bg-pattern-mobile-nav.svg');
+
+    ul {
+        font-weight: 600;
+
+        li {
+            margin-bottom: 1.8em;
+        }
+    }
+
+    button {
+        width: 90%;
+    }
+
+}

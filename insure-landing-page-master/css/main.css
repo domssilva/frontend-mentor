@@ -27,8 +27,12 @@ button {
   border: none;
   outline: none;
   padding: .5em;
+  z-index: 1000;
+  cursor: pointer;
   background: none;
   border: 1px solid #fafafa;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 ul li {
@@ -43,7 +47,6 @@ hr {
 
 a {
   text-decoration: none;
-  color: #fafafa;
 }
 
 a:hover {
@@ -60,6 +63,26 @@ a:hover {
   text-transform: uppercase;
 }
 
+.far {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.dark-btn:hover {
+  background-color: #fafafa;
+  color: #2d2640;
+  z-index: 1000;
+}
+
+.footer-list li:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #2d2640;
+}
+
+.desktop-view {
+  display: none;
+}
+
 header {
   position: relative;
 }
@@ -69,9 +92,12 @@ header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 4em;
+  z-index: 100;
 }
 
 header .nav i.fas {
@@ -125,10 +151,11 @@ main {
   text-align: center;
   position: relative;
   background-color: #fafafa;
+  z-index: 10;
 }
 
 main .svg-hero-overlay {
-  top: -20%;
+  top: -10%;
   left: 1%;
   width: 100%;
   height: 100%;
@@ -211,7 +238,7 @@ footer {
   background-color: whitesmoke;
   background-image: url("../images/bg-pattern-footer-mobile.svg");
   background-repeat: no-repeat;
-  background-position: center -6.5%;
+  background-position: center -6%;
   background-size: contain;
 }
 
@@ -220,24 +247,30 @@ footer .insure {
 }
 
 footer hr {
-  opacity: .1;
   margin: 1.5em;
+  margin-top: 3em;
 }
 
 footer .icons-container {
   width: 30vw;
-  opacity: .7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  font-size: 1.4em;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
 footer .icons-container i {
+  color: #a1a1a1;
+  margin-right: .4em;
   -webkit-transition: all .1s linear;
   transition: all .1s linear;
+}
+
+footer .icons-container i:last-child {
+  margin-right: 0;
 }
 
 footer .icons-container i:hover {
@@ -275,15 +308,36 @@ footer .footer-list ul li {
   height: 90vh;
   width: 100vw;
   padding: 2em;
-  top: 61px;
+  top: 4em;
   text-align: center;
   position: absolute;
   text-transform: uppercase;
-  background-color: #2d2640;
+  background-color: #2b272f;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-image: url("../images/bg-pattern-mobile-nav.svg");
+  z-index: 50;
+  -webkit-animation: slideIn .6s ease-out;
+          animation: slideIn .6s ease-out;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    top: -10em;
+  }
+  100% {
+    top: 4em;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    top: -10em;
+  }
+  100% {
+    top: 4em;
+  }
 }
 
 #toggleNavMobile ul {
@@ -294,7 +348,241 @@ footer .footer-list ul li {
   margin-bottom: 1.8em;
 }
 
+#toggleNavMobile ul a {
+  color: #fafafa;
+}
+
 #toggleNavMobile button {
   width: 90%;
+}
+
+@media (min-width: 768px) {
+  .svg-hero-overlay,
+  .hero-intro,
+  main,
+  header {
+    background-image: none !important;
+  }
+  .desktop-view {
+    display: block;
+  }
+  header {
+    height: 80vh;
+    background-color: #2d2640;
+  }
+  header .nav {
+    background-color: #fafafa;
+  }
+  header i.fas {
+    display: none;
+  }
+  header .insure {
+    margin-left: 10%;
+  }
+  #toggleNavMobile {
+    top: 0;
+    right: 0;
+    height: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: none;
+            animation: none;
+    background: none;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1000;
+  }
+  #toggleNavMobile button {
+    width: 8em;
+    height: 2.5em;
+    background-color: #2d2640;
+    text-transform: uppercase;
+  }
+  #toggleNavMobile button:hover {
+    background-color: #fafafa;
+    border: 1px solid #2d2640;
+    color: #2d2640;
+  }
+  #toggleNavMobile ul {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  #toggleNavMobile ul li {
+    margin: 0;
+  }
+  #toggleNavMobile ul a {
+    color: #2d2640;
+  }
+  #toggleNavMobile ul a:hover {
+    color: #95a9c6;
+  }
+  header .svg-pattern {
+    z-index: 50;
+  }
+  header .svg-pattern-right {
+    top: -10%;
+    right: -90%;
+    height: 60vh;
+    width: 300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg-pattern-intro-right-desktop.svg") !important;
+  }
+  header .svg-pattern-left {
+    top: 80%;
+    left: -12%;
+    height: 50vh;
+    width: 300px;
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../images/bg-pattern-intro-left-desktop.svg") !important;
+  }
+  header .hero-img {
+    top: 15%;
+    left: 60%;
+    z-index: 10;
+    width: 380px;
+    height: 500px;
+    position: relative;
+    background-image: url("../images/image-intro-desktop.jpg");
+  }
+  header .hero-intro {
+    top: 4em;
+    left: 4em;
+    width: 50%;
+    z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: none !important;
+  }
+  header .hero-intro hr {
+    opacity: .7;
+    width: 100px;
+    color: #fafafa;
+    position: relative;
+    margin: 2em 0;
+  }
+  header .hero-intro h1 {
+    text-align: left;
+    font-size: 300%;
+    width: 55%;
+  }
+  header .hero-intro p {
+    text-align: justify;
+  }
+  main {
+    z-index: 1;
+    padding-top: 12em;
+    text-align: left;
+  }
+  main hr {
+    margin: 0;
+    width: 7.5em;
+    margin: 0 8.5em;
+    opacity: .1;
+  }
+  main h2 {
+    width: 80%;
+    font-size: 280%;
+    margin: 1em auto;
+  }
+  main .traits {
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  main .traits p {
+    width: 90%;
+  }
+  main .more {
+    width: 70%;
+    height: 30vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-size: 24em;
+    background-position: right -40px top;
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+  }
+  main .more h3 {
+    margin: 0;
+  }
+  main .more button {
+    height: 3em;
+    width: 15%;
+  }
+  footer {
+    background-size: 22em;
+    background-position: left top;
+    background-image: url("../images/bg-pattern-footer-desktop.svg");
+  }
+  footer .footer-top-container,
+  footer .footer-list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer .footer-top-container {
+    width: 90%;
+    margin: 0 auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .footer-top-container > * {
+    margin: 0;
+  }
+  footer .footer-top-container .icons-container {
+    width: auto;
+  }
+  footer hr {
+    opacity: .1;
+  }
+  footer .footer-list-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+    margin-left: 5%;
+    text-align: left;
+  }
 }
 /*# sourceMappingURL=main.css.map */

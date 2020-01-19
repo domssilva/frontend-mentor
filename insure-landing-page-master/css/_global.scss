@@ -21,8 +21,11 @@ button {
     border: none;           
     outline: none;
     padding: .5em;
+    z-index: 1000;
+    cursor: pointer;
     background: none;
     border: 1px solid $gray;
+    transition: all .2s linear;
 }
 
 ul {
@@ -39,7 +42,6 @@ hr {
 
 a {
     text-decoration: none;
-    color: $gray;
 
     &:hover {
         color: $blue;
@@ -52,4 +54,26 @@ a {
     font-weight: 700;
     align-self: center;
     text-transform: uppercase;
+}
+
+.far {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.dark-btn {
+
+    &:hover {
+        background-color: $gray;
+        color: $violet1;
+        z-index: 1000;
+    }
+}
+
+.footer-list {
+
+    li:hover {
+        cursor: pointer;
+        border-bottom: 1px solid $violet1;
+    }
 }

@@ -1,0 +1,258 @@
+@media (min-width: 768px) {
+
+    .svg-hero-overlay,
+    .hero-intro,
+    main,
+    header {
+        background-image: none !important;
+    }
+
+    .desktop-view {
+        display: block;
+    }
+
+// nav
+    header {
+        height: 80vh;
+        background-color: $violet1;
+
+        .nav {
+            background-color: $gray;
+        }
+
+        i.fas {
+            display: none;
+        }
+
+        .insure {
+            margin-left: 10%;
+        }
+
+    }
+
+    #toggleNavMobile {
+        top: 0;
+        right: 0;
+        height: 4em;  
+        display: flex;
+        animation: none;
+        background: none;
+
+        justify-content: flex-end;
+        align-items: center;
+        
+        z-index: 1000;
+
+        button {
+            width: 8em;
+            height: 2.5em;
+            background-color: $violet1;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: $gray;
+                border: 1px solid $violet1;
+                color: $violet1;
+            }
+        }
+
+        ul {
+
+            width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-evenly;
+
+            li {
+                margin: 0;
+            }
+
+            a {
+                color: $violet1;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+
+    }
+
+// nav
+
+// hero section
+
+header {
+
+    .svg-pattern {
+        z-index: 50;
+
+        &-right {
+        top: -10%;
+        right: -90%;
+        height: 60vh;
+        width: 300px;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('../images/bg-pattern-intro-right-desktop.svg') !important;   
+        }
+
+        &-left {
+            top: 80%;
+            left: -12%;
+            height: 50vh;
+            width: 300px;
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('../images/bg-pattern-intro-left-desktop.svg') !important;   
+        }
+
+    }
+
+
+    .hero-img {
+        top: 15%;
+        left: 60%;
+        z-index: 10;
+        width: 380px;
+        height: 500px;
+        position: relative;
+        background-image: url('../images/image-intro-desktop.jpg');
+    }
+    
+    .hero-intro {
+        top: 4em;
+        left: 4em;
+        width: 50%;
+        z-index: 10;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: none !important;
+    
+        hr {
+            opacity: .7;
+            width: 100px;
+            color: $gray;
+            position: relative;
+            margin: 2em 0;
+        }
+    
+    
+        h1 {
+            text-align: left;
+            font-size: 300%;
+            width: 55%;
+        }
+    
+        p {
+            text-align: justify;
+        }
+    
+    }
+}
+// hero section
+
+main {
+    z-index: 1;
+    padding-top: 12em;
+    text-align: left;
+
+    hr {
+        margin: 0;
+        width: 7.5em;
+        margin: 0 8.5em;
+        opacity: .1;
+    }
+
+    h2 {
+        width: 80%;
+        font-size: 280%;
+        margin: 1em auto;
+    }
+
+    .traits {
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: row;
+
+        p {
+            width: 90%;
+        }
+
+    }
+
+    .more {
+
+        width: 70%;
+        height: 30vh;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+
+        background-size: 24em;
+        background-position: right -40px top;
+        background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+
+        h3 {
+            margin: 0;
+        }
+
+        button {
+
+            height: 3em;
+            width: 15%;
+    
+        }
+    }
+}
+
+footer {
+    background-size: 22em;
+    background-position: left top;
+    background-image: url('../images/bg-pattern-footer-desktop.svg');
+
+    .footer-top-container,
+    .footer-list-container {
+        display: flex;
+    }
+
+    .footer-top-container {
+
+        & > * {
+            margin: 0;
+        }
+
+        .icons-container {
+            width: auto;
+        }
+
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    hr {
+        opacity: .1;
+    }
+
+    .footer-list-container {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-left: 5%;
+        text-align: left;
+    }
+
+}
+
+
+}
+
+

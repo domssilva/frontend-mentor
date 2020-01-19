@@ -123,6 +123,7 @@ header .hero-img {
 
 header .hero-intro {
   padding: 2em;
+  padding-top: 6em;
   color: #fafafa;
   min-height: 60vh;
   text-align: center;

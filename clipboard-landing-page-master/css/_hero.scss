@@ -1,0 +1,50 @@
+.hero {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url('/images/bg-header-mobile.png');
+    
+    padding-top: 120px;
+
+    @include breakpoint(medium) {
+        padding-top: 130px;
+        background-image: url('/images/bg-header-desktop.png');
+    }
+
+    &__logo {
+        width: 125px;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+
+        @include breakpoint(large) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    &__cta {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+        
+        button:first-child {
+
+            margin-bottom: 20px;
+
+            @include breakpoint (medium) {
+                margin-bottom: 0;
+                margin-right: 16px;
+            }
+        }
+
+    }
+}

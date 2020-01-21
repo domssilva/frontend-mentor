@@ -1,0 +1,26 @@
+//mobile 1st
+// @include breakpoint(large) for dekstop
+
+.clipboard {
+    
+    &__image {
+            
+        img {
+            max-width: 100%;
+        }
+
+    }
+
+    p {
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto 3em auto;
+    }
+
+    @include breakpoint(large) {
+        p {
+            margin: 0 auto 5.5em auto;
+        }
+    }
+
+}

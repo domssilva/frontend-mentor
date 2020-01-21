@@ -1,0 +1,75 @@
+.snippets {
+
+    position: relative;
+
+    &__content {
+        width: 100%;
+
+        @include breakpoint(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__image, &__features {
+        @include breakpoint(large) {
+            flex: 1;
+        }
+    }
+
+    &__image {
+        margin-bottom: 76px;
+
+        @include breakpoint(large){
+            margin-bottom: 0px;
+        }
+
+        img {           
+            width: 90%;
+            max-width: 500px;
+
+            //desktop
+            @include breakpoint(large) {
+                left: 0;
+                top: 232px;
+                width: 50%;
+                position: absolute;
+                max-width: none;
+                transform: translateX(-55px);
+            }
+        }
+    }
+
+
+    &__features {
+
+        //mobile
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin: auto;
+            // width: 80%;
+            max-width: 280px;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        
+        //desktop
+        @include breakpoint(large) { 
+            
+            padding-top: 2em;
+            margin-left: 80px;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            p {
+                max-width: 340px;
+                text-align: left;
+                margin-bottom: 4em;
+            }
+
+        }
+
+    }
+}

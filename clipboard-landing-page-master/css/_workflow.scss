@@ -1,0 +1,88 @@
+.workflow {
+
+    .content {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1000px;
+        text-align: center;
+    }
+
+    p.medium {
+        margin-bottom: 4em;
+    }
+
+    &__traits {
+        display: flex;
+        margin-bottom: 4em;
+        align-items: center;
+        flex-direction: column;
+        
+        @include breakpoint(large) {
+            margin-bottom: 8em;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__icon {
+            width: 40px;
+            align-self: center;
+            margin-bottom: 1em;
+        }
+
+        &__item {
+            display: flex;
+            max-width: 320px;
+            min-height: 240px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            h4 {
+                color: $blue2;
+                margin-bottom: 1em;
+
+                @include breakpoint-less(small) {
+                    font-size: 130%;
+                }
+
+            }
+
+            p {
+                line-height: 1.65;
+                margin: 0;
+            }
+
+            div {
+                margin-right: 1em;
+
+                &:last-of-type {
+                    margin-right: 0;;
+                }
+            }
+        }
+
+    }
+
+    &__sponsorship {
+
+        img {
+            width: 55%;
+            max-width: 150px;
+            margin: auto;
+        }
+
+        display: flex;
+        min-height: 620px;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint(large) {
+            min-height: 0;
+            flex-direction: row;
+        }
+
+    }
+
+}

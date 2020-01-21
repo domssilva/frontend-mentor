@@ -1,0 +1,138 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $gray;
+    font-size: 1rem;
+    line-height: 1.3;
+    font-family: $font__primary;
+
+    @include breakpoint(large) {
+        font-size: 1.15rem;
+    }
+}
+
+h1, h2, h3 {
+    color: $blue2;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    
+    @include breakpoint(medium) {
+        font-size: 2.75rem;
+    }
+}
+
+h2 {
+
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+
+    @include breakpoint(large) {
+        font-size: 2.125rem;
+    }
+
+}
+
+button {
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 14px 40px;
+    position: relative;
+    border-radius: 30px;
+    font-size: 0.875rem;
+
+    transition: background 100ms ease-in-out;
+
+    @include breakpoint-less(small) {
+        width: 100%;
+    }
+
+    &.cyan {
+        background-color: $cyan;
+        box-shadow: 1px 2px 3px darken($cyan, 8%);
+
+        &:hover {
+            background-color: lighten($cyan, 8%);
+        }
+    }
+    
+    &.purple {
+        background-color: $blue1;
+        box-shadow: 2px 2px 3px darken($blue1, 5%);
+
+        &:hover {
+            background-color: lighten($blue1, 5%);
+        }
+    }
+
+}
+
+// helper classes
+.wrapper {
+    
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 157px;
+
+    @include breakpoint(large) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 142px;
+    }
+
+}
+
+.centered {
+   
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .content {
+        max-width: 700px;
+    }
+}
+
+// P tags
+
+p {
+    margin-top: 0;
+}
+
+p.large { // 18px
+    font-size: 1.25rem;
+}
+
+p.medium { // 16px
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+p.small { // 14px
+    font-size: 0.875rem;
+}
+
+.margin-bottom {
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.lg-margin-bottom {
+    margin-bottom: 80px;
+}

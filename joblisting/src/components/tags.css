@@ -1,0 +1,86 @@
+/* Tags session */
+.feed__tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  visibility: visible;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  justify-content: space-between;
+
+  transition: 0.3s all ease-in-out;
+  background: white;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
+
+.feed__tags.closed {
+  height: 0;
+  opacity: 0%;
+  visibility: none;
+  transform: translateY(-200px);
+}
+
+.feed__tags--selected {
+  flex-grow: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feed__tags--clear span {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--bg2);
+  text-transform: capitalize;
+}
+
+.feed__tags--clear span:hover {
+  text-decoration: underline;
+}
+
+.feed__tags--btn {
+  margin-right: 40px;
+  margin-bottom: 20px;
+  padding: 8px 10px;
+  color: var(--bg2);
+  background: var(--bg3);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 3px;
+  position: relative;
+}
+
+.feed__tags--btn span {
+  text-align: left;
+  position: relative;
+  padding-right: 10px;
+}
+
+.feed__tags--btn button {
+  border: 0;
+  width: 30px;
+  padding: 5px;
+  height: 100%;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+  background: var(--bg2);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.feed__tags--btn button:hover {
+  cursor: pointer;
+  background: var(--dark);
+}
+
+@media (min-width: 780px) {
+  .feed__tags {
+    min-height: 0;
+  }
+}

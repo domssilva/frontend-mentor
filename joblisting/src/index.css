@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+:root {
+  --bg1: hsl(180, 52%, 96%);
+  --bg2: hsl(180, 29%, 50%);
+  --bg3: hsl(180, 31%, 95%);
+
+  --gray: hsl(180, 8%, 52%);
+  --dark: hsl(180, 14%, 20%);
+
+  --border-radius: 3px;
+  --feed-margin: 40px;
+  --shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: var(--bg1);
+  font-family: 'Spartan', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  padding-top: 50px;
+}

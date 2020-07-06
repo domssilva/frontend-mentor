@@ -25,6 +25,18 @@ Design Viewports:
   );
 }
 
+@mixin gradient-border {
+  border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: 
+    linear-gradient(
+      to right,
+      $green,
+      $cyan
+    );
+}
+
 // MEDIA QUERIES
 @mixin adapt($breakpoint) {
   @if $breakpoint == phone {

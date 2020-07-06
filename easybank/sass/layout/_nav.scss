@@ -26,6 +26,36 @@
   justify-content: space-evenly;
   background: inherit;
 
+  &__list {
+    @include adapt(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__list-block {
+    @include adapt(desktop) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+
+    color: $gray-3;
+
+    &:hover {
+      color: $green;
+
+      @include adapt(desktop) {
+        color: black;
+        @include gradient-border;
+      }
+
+      padding-bottom: 2.18rem;
+    }
+  }
+
   &.desktop {
     @include hide;
 
@@ -34,29 +64,17 @@
       width: 62%;
       margin-right: 8rem;
       
-      & .navigation__list {
-        display: flex;
-        justify-content: space-between;
-      }
-      
       & .navigation__list-block {
-        display: flex;
-        align-items: center;
-
+        
         & .navigation__item {
           margin: 0;
-
-          & .navigation__link:hover {
-            color: black;
-            padding-bottom: 2.18rem;
-            border-bottom: 5px solid $green;
-          }
 
           &:not(:last-child) {
             margin-right: 3rem;
           }
         }
       }
+
     }
   }
 

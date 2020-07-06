@@ -1,0 +1,72 @@
+.footer {
+  background: $blue;
+  padding: $sections-padding;
+
+  @include adapt(tablet) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__first-block {
+    text-align: center;
+  }
+
+  &__logo {
+    display: inline-block;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      fill: $white;
+    }
+    
+    li {
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__links {
+    font-size: 1.5rem;
+    text-align: center;
+
+    @include adapt(tablet) {
+      width: 35rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+    }
+
+    li {
+      &:not(last-child) {
+        margin-bottom: 1rem;
+
+        @include adapt(tablet) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    li > a {
+      color: $white;
+    }
+  }
+
+  &__invite {
+    text-align: center;
+  }
+
+  &__button {
+    width: auto;
+    margin: 0 auto 1.5rem auto;
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+  }
+}

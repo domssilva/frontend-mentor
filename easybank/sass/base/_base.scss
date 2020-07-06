@@ -1,0 +1,77 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p {
+  color: $gray-3;
+  line-height: 3rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a.btn:hover {
+  color: white;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  transition: color .2s;
+  color: black;
+  
+  &:hover {
+    color: $green;
+  }
+}
+
+a.btn {
+  color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.green-hover:hover {
+  color: $green;
+  cursor: pointer;
+}
+
+svg.green-hover:hover {
+  fill: $green;
+}
+
+.btn {
+  @include gradient;
+  padding: 1.5rem 2.6rem;
+  font-weight: 700;
+  color: $white;
+  border-radius: 100px;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 13rem;
+  cursor: pointer;
+  display: block;
+  transition: transform .3s ease;
+
+  &:hover {
+    transform: translateY(1px);
+    opacity: 0.9;
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+button {
+  border: none;
+  color: $white;
+}

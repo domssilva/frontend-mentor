@@ -1,0 +1,82 @@
+.hero {
+
+  &.desktop {
+    @include hide;
+  }
+
+  @include adapt(desktop) {
+    &.mobile {
+      @include hide;
+    }
+
+    &.desktop {
+      margin: 0;
+      position: relative;
+      height: 50rem;
+      @include unhide;
+    }
+  }
+
+  margin-bottom: 8rem;
+
+  &__background {
+    height: 22rem;
+    padding: 3rem;
+    background-position: 0 -7rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../images/bg-intro-mobile.svg); 
+
+    @include adapt(desktop) {
+      position: relative;
+      height: 100%;
+      background-size: 74rem;
+      background-position: right -20% bottom 3rem;
+      background-image: url(../../images/bg-intro-desktop.svg);
+    }
+  }
+
+  &__floating-mobiles {
+    height: 40rem;
+    transform: translateY(-14rem);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../images/image-mockups.png);
+
+    @include adapt(desktop) {
+      transform: translate(0, 0) scale(1.7);
+      position: absolute;
+      width: 35rem;
+      top: 3rem;
+      right: 3rem;
+      z-index: 10;
+    }
+  }
+
+  &__content {
+    background: $white;
+    padding: $sections-padding;
+
+    @include adapt(desktop) {
+      width: 45rem;
+      position: absolute;
+      top: 0;
+      background: none;
+      z-index: 20;
+      padding: $sections-padding-desktop;
+    }
+  }
+
+  &__title {
+    @include adapt(desktop) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: $gray-3;
+    line-height: 3rem;
+  }
+
+}

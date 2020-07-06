@@ -1,0 +1,102 @@
+.articles {
+  background: $gray-2;
+  font-weight: 400;
+  padding: $sections-padding;
+  
+  @include adapt(desktop) {
+    padding: $sections-padding-desktop;
+  }
+
+  &__container {
+    @include adapt(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include adapt(desktop) {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  &__main-title {
+    font-size: 3.3rem;
+
+    @include adapt(desktop) {
+      text-align: left;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+
+    @include adapt(tablet) {
+      width: 30rem;
+      height: 20rem;
+    }
+
+    @include adapt(desktop) {
+      width: 100%;
+      max-width: $articles-images-width;
+      height: 18rem;
+    }
+  }
+
+  &__author {
+    font-size: 1rem;
+    color: $gray-3;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $gray-3;
+    line-height: 1.4rem;
+  }
+}
+
+.articles__block {
+  background: $white;
+
+  @include adapt(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include adapt(desktop) {
+    width: 25%;
+    max-width: $articles-images-width;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &:not(:last-child) {
+      margin-right: 3.5%;
+    }
+  }
+  
+  &-content {
+    padding: 2em 1.5em 4em 1.5em;
+    @include adapt(tablet) {
+      text-align: left;
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    @include adapt(desktop) {
+      padding: 2em 1.5em;
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.features {
+  background: $gray-1;
+  padding: $sections-padding;
+  text-align: center;
+
+  @include adapt(desktop) {
+    padding: $sections-padding-desktop;
+  }
+
+  &__intro {
+    margin-bottom: 5rem;
+
+    @include adapt(desktop) {
+      text-align: left;
+      width: 60rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__title {
+    @include adapt(desktop) {
+      text-align: left;
+    }
+  }
+}
+
+.flex {
+
+  &__content {
+    @include adapt(desktop) {
+      display: flex;
+    }
+  }
+
+  &__content-block {
+    margin-bottom: 3rem;
+
+    @include adapt(desktop) {
+      text-align: left;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__content-icon {
+    margin-bottom: 2rem;
+  }
+
+  &__content-block-title {
+    color: $blue;
+    font-weight: 400;
+    letter-spacing: .12rem;
+    margin-bottom: 2rem;
+  }
+}
